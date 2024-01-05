@@ -1,0 +1,28 @@
+Problem statement:-
+Write a program that generates a multiplication table for a given integer.
+
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+The input integer n is non-negative and less than or equal to 10,000.
+Note:->> The program should take an integer as input and print the first 10 multiples of the input integer. Each multiple should be printed on a new line.
+The program should not print anything else. The program should handle the case where the input integer is 0. In this case, the program should print ten lines of 0.
+The program does not need to handle invalid input. It can assume that the input will always be a valid integer within the specified constraints.
+>>>>>>
+>>>>.
+Solution:->>>>>
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int mul = 0;
+		int i;
+		for (i = 1; i <= 10; i++) {
+			mul = i * n;
+			System.out.println(mul);
+		}
+	}
+}
