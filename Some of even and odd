@@ -1,0 +1,33 @@
+Problem statement:-
+Write a program to input an integer 'n' and print the sum of all its even digits and the sum of all its odd digits separately.
+Digits mean numbers, not places! That is, if the given integer is "132456", even digits are 2, 4, and 6, and odd digits are 1, 3, and 5.
+
+Constraints
+0<= 'n' <=10000
+>>>>>
+>>>.
+Solution:->>>>
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner s = new Scanner(System.in);
+		int N = s.nextInt();
+
+		int digit, Esum = 0, Osum = 0;
+		while (N > 0) {
+			digit = N % 10;
+			if (digit % 2 == 0) {
+				Esum = Esum + digit;
+			} else {
+				Osum = Osum + digit;
+			}
+			N = N / 10;
+		}
+		System.out.println(Esum + " " + Osum);
+
+		// System.out.print(Osum);
+	}
+}
